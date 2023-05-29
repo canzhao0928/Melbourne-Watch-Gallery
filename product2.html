@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+  <title>Melbourne Watch Gallery</title>
+</head>
+
+<body onload="displayShoppingCart()">
+  <!-- Navigation bar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" href="home.html">Melbourne Watch Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="login.html">Product Management</a>
+          </li>
+        </ul>
+
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">
+            Search
+          </button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <div class="grid-center">
+    <div class="header">
+      <a href="home.html"> <img class="logo" src="images/logo.jpg" alt=""></a>
+      <h1>Melbourne Watch Gallery</h1>
+    </div>
+  </div>
+
+  <div class="p-5 product-main-container">
+    <div class="product-imgs">
+      <img class="product-main-img"
+        src="https://cdn.shopify.com/s/files/1/0024/9803/5810/products/531805-Product-0-I-637647131901276778_467x.jpg?v=1629695262"
+        alt="Samsung Galaxy Watch4 40mm (Gold)">
+      <div class="product-img-gallery">
+        <img onmouseover="enlargeImg(this)" class="grey-border"
+          src="https://cdn.shopify.com/s/files/1/0024/9803/5810/products/531805-Product-0-I-637647131901276778_467x.jpg?v=1629695262"
+          alt="Samsung Galaxy Watch4 40mm (Gold)">
+        <img onmouseover="enlargeImg(this)" class="grey-border"
+          src="https://cdn.shopify.com/s/files/1/0024/9803/5810/products/531805-Product-1-I-637647131901120499_467x.jpg?v=1629695262"
+          alt="Samsung Galaxy Watch4 40mm (Gold)">
+        <img onmouseover="enlargeImg(this)" class="grey-border"
+          src="https://cdn.shopify.com/s/files/1/0024/9803/5810/products/531805-Product-3-I-637647131901589321_467x.jpg?v=1629695262"
+          alt="Samsung Galaxy Watch4 40mm (Gold)">
+        <img onmouseover="enlargeImg(this)" class="grey-border"
+          src="https://cdn.shopify.com/s/files/1/0024/9803/5810/products/531805-Product-5-I-637647131901120499_467x.jpg?v=1629695262"
+          alt="Samsung Galaxy Watch4 40mm (Gold)">
+      </div>
+    </div>
+    <div class="product-info">
+      <h2 id="itemName">Samsung Galaxy Watch4 40mm (Gold)</h2>
+      <p class="text-body-secondary">MODEL: 11901221791</p>
+      <h2 id="itemPrice">$249</h2>
+      <button onclick="addToCartProdect(this)" class="btn btn-primary btn-text">Add to Cart</button>
+      <h2 class="mt-100">Product Overview</h2>
+      <p class="pe-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi obcaecati error laboriosam
+        nesciunt cupiditate est accusamus? Quisquam nesciunt ab voluptates quibusdam officia qui repellendus ipsum
+        necessitatibus maiores excepturi sapiente, fugit quasi. Vero vitae alias obcaecati saepe eius, ratione
+        accusantium, labore maiores,
+        fugiat numquam dolor?</p>
+    </div>
+    <div class="product-grid-col-3 shoppingCart-container">
+      <div id="cart">
+
+      </div>
+
+      <div class="shoppingCart-total">
+        <div class="shoppingCart-total-price">
+          <p>Total</p>
+          <p id="totalPrice">$1120</p>
+        </div>
+        <button class="shoppingCart-total-btn btn btn-success btn-text">Check out <span
+            class="badge bg-secondary">0</span></button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
